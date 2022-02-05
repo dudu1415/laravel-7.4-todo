@@ -45,6 +45,7 @@
                             @endif
                             <form action="/todos/{{$todo->id}}" method="post" class="ms-2">
                                 @csrf
+                                @method('delete')
                                 <button type="submit" style="all: unset; cursor: pointer;">
                                     <i class="bi bi-x-octagon fs-4"></i>
                                 </button>

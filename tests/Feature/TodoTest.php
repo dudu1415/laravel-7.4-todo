@@ -237,7 +237,7 @@ class TodoTest extends TestCase
         $todo = $data['todos'][$user->id][0];
         $this->actingAs($user);
         // Acessar rota completar TODOs
-        $this->post('/todos/' . $todo->id);
+        $this->delete('/todos/' . $todo->id);
 
         // Verificar se TODO foi removido no banco de dados
         $this->assertDatabaseMissing('todos', [
